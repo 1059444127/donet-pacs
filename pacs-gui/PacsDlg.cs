@@ -16,5 +16,10 @@ namespace pacs_gui
         {
             InitializeComponent();
         }
+
+        private void Startup_Click(object sender, EventArgs e)
+        {
+            var port = textPort.Text;
+        }
     }
 }

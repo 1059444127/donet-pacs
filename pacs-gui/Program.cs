@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using pacs_common;
+using System;
 using System.Windows.Forms;
 
 namespace pacs_gui
@@ -14,6 +12,8 @@ namespace pacs_gui
         [STAThread]
         static void Main()
         {
+            // 链接数据库
+            SqlHelper.SetConnectionString("oracle");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new PacsDlg());
