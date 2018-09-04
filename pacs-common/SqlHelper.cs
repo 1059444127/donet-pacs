@@ -8,5 +8,6 @@ namespace pacs_common
 {
     public class SqlHelper
     {
+
     }
 }
