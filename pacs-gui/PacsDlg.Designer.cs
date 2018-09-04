@@ -33,6 +33,8 @@
             this.textPort = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textAE = new System.Windows.Forms.TextBox();
+            this.label_path = new System.Windows.Forms.Label();
+            this.textPath = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // startup
@@ -60,7 +62,7 @@
             this.textPort.Name = "textPort";
             this.textPort.Size = new System.Drawing.Size(58, 21);
             this.textPort.TabIndex = 2;
-            this.textPort.TextChanged += new System.EventHandler(this.textPort_TextChanged);
+            this.textPort.Text = "104";
             // 
             // label1
             // 
@@ -70,7 +72,6 @@
             this.label1.Size = new System.Drawing.Size(47, 12);
             this.label1.TabIndex = 3;
             this.label1.Text = "AETitle";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textAE
             // 
@@ -78,12 +79,32 @@
             this.textAE.Name = "textAE";
             this.textAE.Size = new System.Drawing.Size(99, 21);
             this.textAE.TabIndex = 4;
+            this.textAE.Text = "JFPACS";
+            // 
+            // label_path
+            // 
+            this.label_path.AutoSize = true;
+            this.label_path.Location = new System.Drawing.Point(24, 84);
+            this.label_path.Name = "label_path";
+            this.label_path.Size = new System.Drawing.Size(53, 12);
+            this.label_path.TabIndex = 5;
+            this.label_path.Text = "存储位置";
+            // 
+            // textPath
+            // 
+            this.textPath.Location = new System.Drawing.Point(83, 81);
+            this.textPath.Name = "textPath";
+            this.textPath.Size = new System.Drawing.Size(267, 21);
+            this.textPath.TabIndex = 6;
+            this.textPath.Text = "E:/Code/dicom";
             // 
             // PacsDlg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(475, 83);
+            this.ClientSize = new System.Drawing.Size(477, 131);
+            this.Controls.Add(this.textPath);
+            this.Controls.Add(this.label_path);
             this.Controls.Add(this.textAE);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textPort);
@@ -103,6 +124,8 @@
         private System.Windows.Forms.TextBox textPort;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textAE;
+        private System.Windows.Forms.Label label_path;
+        private System.Windows.Forms.TextBox textPath;
     }
 }
 

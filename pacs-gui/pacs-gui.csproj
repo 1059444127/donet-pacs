@@ -84,6 +84,10 @@
       <Project>{4c364e3a-8ae3-4756-9038-d6396e978ea9}</Project>
       <Name>pacs-common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\pacs-store\pacs-store.csproj">
+      <Project>{6519f8a6-376d-4410-a44b-fa90e0638771}</Project>
+      <Name>pacs-store</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

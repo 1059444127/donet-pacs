@@ -20,6 +20,13 @@ namespace pacs_gui
         private void Startup_Click(object sender, EventArgs e)
         {
             var port = textPort.Text;
+            var ae = textAE.Text;
+            var path = textPath.Text; 
+            pacs_store.StoreSCP storeSCP = new pacs_store.StoreSCP();
+            pacs_store.StoreSCP.StoragePath = path;
+            pacs_store.StoreSCP.port = port;
+            pacs_store.StoreSCP.ae = ae;
+            storeSCP.run();
         }
     }
 }

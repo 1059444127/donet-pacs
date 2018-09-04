@@ -12,6 +12,7 @@ namespace pacs_store
     {
         public static string StoragePath = "./dicom";
         public static string port = "104";
+        public static string ae = "JFPACS";
 
         public void run()
         {
@@ -20,7 +21,7 @@ namespace pacs_store
 
             // 设置端口
             var port = int.Parse(StoreSCP.port);
-            Console.WriteLine($"Starting C-Store SCP server on port {port}");
+            Console.WriteLine($"Starting C-Store SCP server on port {port} and ae {ae}");
             var server = DicomServer.Create<CStoreSCP>(port);
 
             // end process
@@ -63,13 +64,13 @@ namespace pacs_store
 
             public Task OnReceiveAssociationRequestAsync(DicomAssociation association)
             {
-                if (association.CalledAE != "STORESCP")
-                {
-                    return SendAssociationRejectAsync(
-                        DicomRejectResult.Permanent,
-                        DicomRejectSource.ServiceUser,
-                        DicomRejectReason.CalledAENotRecognized);
-                }
+                //if (association.CalledAE != ae)
+                //{
+                //    return SendAssociationRejectAsync(
+                //        DicomRejectResult.Permanent,
+                //        DicomRejectSource.ServiceUser,
+                //        DicomRejectReason.CalledAENotRecognized);
+                //}
 
                 foreach (var pc in association.PresentationContexts)
                 {
